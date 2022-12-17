@@ -1,0 +1,61 @@
+[gd_scene load_steps=8 format=3 uid="uid://peyhfqxam0te"]
+
+[ext_resource type="Script" path="res://Scripts/BirdsEyeCam.cs" id="2_lyl1c"]
+[ext_resource type="MeshLibrary" uid="uid://q1ljjfyxev1t" path="res://Blocks/Blocks.tres" id="3_ao8kw"]
+[ext_resource type="Script" path="res://Scripts/Mover.cs" id="3_lrixj"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_sc723"]
+radius = 0.1
+height = 0.1
+
+[sub_resource type="SphereMesh" id="SphereMesh_d26kv"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_dr084"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_78ka0"]
+radius = 0.25
+height = 1.0
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.70306, 0.711131, 0, -0.711131, 0.70306, 0, 2.32097, 3.48579)
+script = ExtResource("2_lyl1c")
+_speed = 0.15
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59961, 0)
+light_energy = 4.0
+
+[node name="Target" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23695, 0.365206, -0.501534)
+mesh = SubResource("SphereMesh_sc723")
+
+[node name="GridMap" type="GridMap" parent="."]
+mesh_library = ExtResource("3_ao8kw")
+cell_size = Vector3(1, 1, 1)
+bake_navigation = true
+data = {
+"cells": PackedInt32Array(0, 0, 1, 0, 1, 1, 1, 1, 1, 1, 0, 1, 2, 2, 0, 2, 1, 0, 2, 0, 0, 2, 65535, 0, 1, 2, 1, 0, 2, 1, 65535, 2, 1, 65534, 2, 1, 65534, 1, 1, 65534, 0, 1, 65535, 0, 1, 65535, 1, 1, 1, 65535, 1, 1, 65534, 1, 0, 65534, 1, 65535, 65534, 1, 65534, 65534, 1, 65534, 65535, 1, 65535, 65535, 1, 0, 65535, 1, 2, 65534, 0, 2, 65533, 0, 1, 65533, 0, 0, 65533, 0, 65535, 65533, 0, 65534, 65533, 0, 65535, 4, 2, 1, 4, 1, 2, 4, 1, 3, 4, 1, 4, 4, 1, 2, 3, 0, 1, 3, 0, 1, 5, 0, 2, 5, 0, 65533, 65533, 0, 65533, 65534, 0, 65533, 65535, 0, 65533, 0, 0, 65533, 1, 0, 65533, 2, 0, 65533, 3, 0, 65533, 4, 0, 65533, 5, 0, 65533, 6, 0, 65534, 6, 0, 65535, 6, 0, 0, 6, 0, 1, 6, 0, 4, 3, 0, 5, 3, 0, 6, 3, 0, 7, 3, 0, 7, 2, 0, 7, 1, 0, 7, 0, 0, 7, 65535, 0, 7, 65533, 0, 7, 65534, 0, 3, 65533, 0, 4, 65533, 0, 5, 65533, 0, 6, 65533, 0, 3, 3, 1, 3, 2, 1, 3, 1, 1, 3, 0, 1, 4, 0, 1, 4, 65535, 1, 4, 65534, 1, 3, 65534, 1, 3, 65535, 1, 5, 65534, 1, 6, 65534, 1, 6, 65535, 1, 6, 0, 1, 6, 1, 1, 6, 2, 1, 5, 2, 1, 4, 2, 1, 4, 1, 1, 5, 1, 1, 5, 0, 1, 5, 65535, 1, 5, 4, 1, 6, 4, 1, 7, 4, 0, 7, 5, 0, 7, 6, 0, 6, 6, 0, 5, 6, 0, 4, 6, 0, 3, 6, 0, 2, 6, 0, 3, 5, 1, 4, 5, 1, 5, 5, 1, 6, 5, 1)
+}
+
+[node name="RigidBody3D" type="RigidBody3D" parent="."]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03941, 2.72223, 0)
+mesh = SubResource("SphereMesh_d26kv")
+skeleton = NodePath("")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="RigidBody3D/MeshInstance3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/MeshInstance3D/StaticBody3D"]
+shape = SubResource("SphereShape3D_dr084")
+
+[node name="Mover" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+mesh = SubResource("CapsuleMesh_78ka0")
+script = ExtResource("3_lrixj")
+_targetNode = NodePath("../Target")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="Mover"]
+agent_height_offset = -0.5
