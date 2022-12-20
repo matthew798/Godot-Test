@@ -1,0 +1,5 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="PackedScene" uid="uid://b0k5vhnvqx17k" path="res://Blocks/rock.tscn" id="1_yokvv"]
+[ext_resource type="PackedScene" uid="uid://dpvtghq4ptqis" path="res://Blocks/rock_floor.tscn" id="2_kdqtl"]
+[ext_resource type="PackedScene" uid="uid://2k5ff4vl4vmc" path="res://Blocks/dungeon_heart.tscn" id="3_07kru"]

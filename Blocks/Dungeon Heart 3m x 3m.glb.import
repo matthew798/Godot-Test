@@ -3,7 +3,7 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://b76p7w162aogy"
+uid="uid://djsrnq7lsegqk"
 path="res://.godot/imported/Dungeon Heart 3m x 3m.glb-a75d7f0029745e355b0f471d5642ef9d.scn"
 
 [deps]
@@ -25,10 +25,11 @@ meshes/lightmap_texel_size=0.2
 skins/use_named_skins=true
 animation/import=true
 animation/fps=30
+animation/trimming=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Dungeon Heart 3m x 3m_Sphere001": {
+"Dungeon Heart 3m x 3m_Sphere002": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
