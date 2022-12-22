@@ -1,16 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://b0k5vhnvqx17k"]
+[gd_scene load_steps=4 format=3 uid="uid://bt02e2p68duu4"]
 
-[ext_resource type="ArrayMesh" uid="uid://bdm7g4auttr3k" path="res://Blocks/Rock 1m x 1m.res" id="1_42ayu"]
-[ext_resource type="Script" path="res://Scripts/RockWallBlock.cs" id="2_8q3l5"]
+[ext_resource type="ArrayMesh" uid="uid://dxp1bucir3lm5" path="res://Prefabs/Blocks/Rock 1m x 1m.res" id="1_au7ko"]
+[ext_resource type="Script" path="res://Scripts/blocks/RockWallBlock.cs" id="2_dkljj"]
 
-[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ehyla"]
+[sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_ucquk"]
 data = PackedVector3Array(-0.5, 0, 0.5, -0.5, 1, -0.5, -0.5, 1, 0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, -0.5, 1, -0.5, -0.5, 0, -0.5, 0.5, 1, -0.5, -0.5, 1, -0.5, -0.5, 0, -0.5, 0.5, 0, -0.5, 0.5, 1, -0.5, 0.5, 0, -0.5, 0.5, 1, 0.5, 0.5, 1, -0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 1, 0.5, 0.5, 0, 0.5, -0.5, 1, 0.5, 0.5, 1, 0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 1, 0.5, -0.5, 0, -0.5, 0.5, 0, 0.5, 0.5, 0, -0.5, -0.5, 0, -0.5, -0.5, 0, 0.5, 0.5, 0, 0.5, 0.5, 1, -0.5, -0.5, 1, 0.5, -0.5, 1, -0.5, 0.5, 1, -0.5, 0.5, 1, 0.5, -0.5, 1, 0.5)
 
 [node name="Rock1mX1m" type="MeshInstance3D"]
-mesh = ExtResource("1_42ayu")
-script = ExtResource("2_8q3l5")
+mesh = ExtResource("1_au7ko")
+script = ExtResource("2_dkljj")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
-shape = SubResource("ConcavePolygonShape3D_ehyla")
+shape = SubResource("ConcavePolygonShape3D_ucquk")

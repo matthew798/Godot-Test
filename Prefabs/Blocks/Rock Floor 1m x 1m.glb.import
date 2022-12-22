@@ -3,13 +3,13 @@
 importer="scene"
 importer_version=1
 type="PackedScene"
-uid="uid://buc2x53s24d4a"
-path="res://.godot/imported/Rock 1m x 1m.glb-aabb50e2efd4943ba55b58692d926ac9.scn"
+uid="uid://de1c1wm4gdy5q"
+path="res://.godot/imported/Rock Floor 1m x 1m.glb-40477eab5a0a42002638c009153dca5e.scn"
 
 [deps]
 
-source_file="res://Blocks/Rock 1m x 1m.glb"
-dest_files=["res://.godot/imported/Rock 1m x 1m.glb-aabb50e2efd4943ba55b58692d926ac9.scn"]
+source_file="res://Prefabs/Blocks/Rock Floor 1m x 1m.glb"
+dest_files=["res://.godot/imported/Rock Floor 1m x 1m.glb-40477eab5a0a42002638c009153dca5e.scn"]
 
 [params]
 
@@ -29,7 +29,7 @@ animation/trimming=false
 import_script/path=""
 _subresources={
 "meshes": {
-"Rock 1m x 1m_Cube001": {
+"Rock Floor 1m x 1m_Plane": {
 "generate/lightmap_uv": 0,
 "generate/lods": 0,
 "generate/shadow_meshes": 0,
@@ -37,7 +37,7 @@ _subresources={
 "lods/normal_split_angle": 25.0,
 "save_to_file/enabled": true,
 "save_to_file/make_streamable": "",
-"save_to_file/path": "res://Blocks/Rock 1m x 1m.res"
+"save_to_file/path": "res://Blocks/Rock Floor 1m x 1m.res"
 }
 }
 }

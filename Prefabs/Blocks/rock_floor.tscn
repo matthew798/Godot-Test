@@ -1,16 +1,16 @@
-[gd_scene load_steps=4 format=3 uid="uid://dpvtghq4ptqis"]
+[gd_scene load_steps=4 format=3 uid="uid://dy5d1bq5nlj54"]
 
-[ext_resource type="ArrayMesh" uid="uid://b50ecsmqtqnb5" path="res://Blocks/Rock Floor 1m x 1m.res" id="1_2t6wg"]
+[ext_resource type="ArrayMesh" uid="uid://b50ecsmqtqnb5" path="res://Prefabs/Blocks/Rock Floor 1m x 1m.res" id="1_33q16"]
 
 [sub_resource type="ConcavePolygonShape3D" id="ConcavePolygonShape3D_45xy2"]
 data = PackedVector3Array(-0.5, 0, 0.5, 0.5, 0, -0.5, 0.5, 0, 0.5, -0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
 
-[sub_resource type="NavigationMesh" id="NavigationMesh_x0dlc"]
+[sub_resource type="NavigationMesh" id="NavigationMesh_xifjf"]
 vertices = PackedVector3Array(-0.5, 0, 0.5, 0.5, 0, 0.5, -0.5, 0, -0.5, 0.5, 0, -0.5)
 polygons = [PackedInt32Array(0, 3, 1), PackedInt32Array(0, 2, 3)]
 
 [node name="RockFloor1mX1m" type="MeshInstance3D"]
-mesh = ExtResource("1_2t6wg")
+mesh = ExtResource("1_33q16")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]
 
@@ -18,4 +18,4 @@ mesh = ExtResource("1_2t6wg")
 shape = SubResource("ConcavePolygonShape3D_45xy2")
 
 [node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
-navmesh = SubResource("NavigationMesh_x0dlc")
+navigation_mesh = SubResource("NavigationMesh_xifjf")

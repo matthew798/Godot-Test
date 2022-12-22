@@ -10,7 +10,7 @@
             "type": "coreclr",
             "request": "launch",
             "preLaunchTask": "build",
-            "program": "C:/Users/matth/Desktop/Godot_v4.0-beta8_mono_win64/Godot_v4.0-beta8_mono_win64.exe",
+            "program": "C:/Users/matth/Desktop/Godot_v4.0-beta9_mono_win64/Godot_v4.0-beta9_mono_win64.exe",
             "console": "internalConsole",
             "stopAtEntry": false
         },
@@ -26,7 +26,7 @@
             "request": "launch",
             "mode": "executable",
             "preLaunchTask": "build",
-            "executable": "C:\\Users\\matth\\Desktop\\Godot_v4.0-beta8_mono_win64\\Godot_v4.0-beta8_mono_win64.exe",
+            "executable": "C:\\Users\\matth\\Desktop\\Godot_v4.0-beta9_mono_win64\\Godot_v4.0-beta9_mono_win64.exe",
             "executableArguments": [
                 "--path",
                 "\\\"${workspaceRoot}\\\""
@@ -38,7 +38,7 @@
             "request": "launch",
             "mode": "executable",
             "preLaunchTask": "build",
-            "executable": "C:\\Users\\matth\\Desktop\\Godot_v4.0-beta8_mono_win64\\Godot_v4.0-beta8_mono_win64.exe",
+            "executable": "C:\\Users\\matth\\Desktop\\Godot_v4.0-beta9_mono_win64\\Godot_v4.0-beta9_mono_win64.exe",
             "executableArguments": [
                 "--path",
                 "${workspaceRoot}",

@@ -1,6 +1,6 @@
-[gd_scene load_steps=8 format=3 uid="uid://peyhfqxam0te"]
+[gd_scene load_steps=8 format=3 uid="uid://cymlubwliqhyl"]
 
-[ext_resource type="Script" path="res://Scripts/BirdsEyeCam.cs" id="2_lyl1c"]
+[ext_resource type="Script" path="res://Scripts/util/BirdsEyeCam.cs" id="1_es0ad"]
 [ext_resource type="Script" path="res://Scripts/Mover.cs" id="3_lrixj"]
 [ext_resource type="Script" path="res://Scripts/level/LevelManager.cs" id="3_rmqfe"]
 
@@ -20,31 +20,29 @@ height = 1.0
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.70306, 0.711131, 0, -0.711131, 0.70306, 0, 2.32097, 3.48579)
-script = ExtResource("2_lyl1c")
+script = ExtResource("1_es0ad")
 _speed = 0.15
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.59961, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6078, 2.59961, 2.30685)
 light_energy = 4.0
 
 [node name="Target" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.23695, 0.365206, -0.501534)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.95015, 0.365206, 1.99725)
 mesh = SubResource("SphereMesh_sc723")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.60196, 1.97076, 2.04502)
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="RigidBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.03941, 2.72223, 0)
 mesh = SubResource("SphereMesh_d26kv")
 skeleton = NodePath("")
 
-[node name="StaticBody3D" type="StaticBody3D" parent="RigidBody3D/MeshInstance3D"]
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D/MeshInstance3D/StaticBody3D"]
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("SphereShape3D_dr084")
 
 [node name="Mover" type="MeshInstance3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5, 0)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.09159, 0.5, 2.14302)
 mesh = SubResource("CapsuleMesh_78ka0")
 script = ExtResource("3_lrixj")
 _targetNode = NodePath("../Target")
@@ -55,6 +53,3 @@ agent_height_offset = -0.5
 [node name="Node3D" type="Node3D" parent="."]
 script = ExtResource("3_rmqfe")
 LevelFile = "res://Levels/TestingGround.json"
-_levelFile = "res://Levels/TestingGround.json"
-_levelNode = Object(Node3D,"_import_path":NodePath(""),"unique_name_in_owner":false,"process_mode":0,"process_priority":0,"editor_description":"","transform":Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0),"rotation_edit_mode":0,"rotation_order":2,"top_level":false,"visible":true,"visibility_parent":NodePath(""),"script":null)
-
