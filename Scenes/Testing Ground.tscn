@@ -24,7 +24,7 @@ script = ExtResource("1_es0ad")
 _speed = 0.15
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.6078, 2.59961, 2.30685)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.6078, 2.59961, 2.30685)
 light_energy = 4.0
 
 [node name="Target" type="MeshInstance3D" parent="."]

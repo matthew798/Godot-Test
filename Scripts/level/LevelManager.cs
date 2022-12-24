@@ -5,6 +5,7 @@ using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 
+[Tool]
 public partial class LevelManager : Node3D
 {
 	private string _levelFile;
