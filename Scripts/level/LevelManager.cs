@@ -5,7 +5,7 @@ using System.IO;
 using System.Linq;
 using Newtonsoft.Json;
 
-[Tool]
+//[Tool] https://github.com/godotengine/godot/issues/70026
 public partial class LevelManager : Node3D
 {
 	private string _levelFile;
@@ -26,6 +26,7 @@ public partial class LevelManager : Node3D
 	// Called when the node enters the scene tree for the first time.
 	public override void _Ready()
 	{
+		LogToConsole();
 		LoadBlocks();
 		
 		if(_levelNode == null){

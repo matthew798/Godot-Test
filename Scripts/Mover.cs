@@ -1,7 +1,7 @@
 using Godot;
 using System;
 
-public partial class Mover : MeshInstance3D
+public partial class Mover : Node3D
 {
 	[Export] private NodePath _targetNode;
 

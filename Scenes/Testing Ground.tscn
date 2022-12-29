@@ -1,8 +1,9 @@
-[gd_scene load_steps=8 format=3 uid="uid://cymlubwliqhyl"]
+[gd_scene load_steps=9 format=3 uid="uid://dispt0wlrb5jf"]
 
 [ext_resource type="Script" path="res://Scripts/util/BirdsEyeCam.cs" id="1_es0ad"]
 [ext_resource type="Script" path="res://Scripts/Mover.cs" id="3_lrixj"]
 [ext_resource type="Script" path="res://Scripts/level/LevelManager.cs" id="3_rmqfe"]
+[ext_resource type="PackedScene" uid="uid://bgdbo25slmw0t" path="res://Prefabs/Characters/character.tscn" id="4_pt2f6"]
 
 [sub_resource type="SphereMesh" id="SphereMesh_sc723"]
 radius = 0.1
@@ -17,6 +18,10 @@ radius = 0.25
 height = 1.0
 
 [node name="Node3D" type="Node3D"]
+
+[node name="Level Manager" type="Node3D" parent="."]
+script = ExtResource("3_rmqfe")
+LevelFile = "res://Levels/TestingGround.json"
 
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 0.70306, 0.711131, 0, -0.711131, 0.70306, 0, 2.32097, 3.48579)
@@ -50,6 +55,6 @@ _targetNode = NodePath("../Target")
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="Mover"]
 agent_height_offset = -0.5
 
-[node name="Node3D" type="Node3D" parent="."]
-script = ExtResource("3_rmqfe")
-LevelFile = "res://Levels/TestingGround.json"
+[node name="Character" parent="." instance=ExtResource("4_pt2f6")]
+transform = Transform3D(0.01, 0, 0, 0, 0.01, 0, 0, 0, 0.01, 2.16, 0, 1.91)
+_targetNode = NodePath("../Target")
